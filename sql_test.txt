@@ -1,0 +1,3 @@
+SELECT t_detail.ID,NoVente,IDClient, PoidsAchat, PrixKgTTC,ModePaiement,(select Nom from t.clients where t_clients.ID = t_detail.IDClient)as D FROM t_detail
+SELECT (select Nom from t.clients where t_clients.ID = t_detail.IDClient)as nom,NoVente,IDClient, PoidsAchat, PrixKgTTC,ModePaiement FROM t_detail
+SELECT (select Nom from t_clients where t_clients.ID = t_detail.IDClient)as NOM ,NoVente, PoidsAchat, PrixKgTTC,ModePaiement FROM t_detail
